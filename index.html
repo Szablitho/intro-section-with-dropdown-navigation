@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -11,8 +11,9 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <script src="scripts/menu-dropdown.js" defer></script>
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
@@ -28,60 +29,105 @@
     </style>
   </head>
   <body>
+    <div id="backdrop"></div>
     <nav>
       <img src="images/logo.svg" alt="Snap logo" />
-      <ul id="primary-navigation" class="primary-navigation flex">
+      <ul id="primary-navigation" class="primary-navigation flex" data-visibility="false">
         <li>
-          <a>Features</a>
-          <img
+          <span>
+            Features
+          <img class="arrow-down"
             src="images/icon-arrow-down.svg"
             alt="icon arrow down"
             aria-hidden="true"
           />
+          </span>
+          
+          <ul class="sub-menu">
+            <li class="option-with-icon">
+              <span>
+                <img src="images/icon-todo.svg" alt="icon todo">Todo List
+              </span></li>
+            <li class="option-with-icon">
+              <span>
+                <img src="images/icon-calendar.svg" alt="calendar icon">Calendar</li>
+              </span>
+            <li class="option-with-icon">
+              <span>
+                <img src="images/icon-reminders.svg" alt="reminder icon">Reminder</li>
+              </span>
+            <li class="option-with-icon">
+              <span>
+                <img src="images/icon-planning.svg" alt="timer icon">Planning
+              </span>
+            </li>
+          </ul>
         </li>
         <li>
-          <a>Company</a>
-          <img
-            src="images/icon-arrow-down.svg"
-            alt="icon arrow down"
-            aria-hidden="true"
-          />
+          <span>
+            Company
+            <img
+            class="arrow-down"
+              src="images/icon-arrow-down.svg"
+              alt="icon arrow down"
+              aria-hidden="true"
+            />
+          </span>
+          <ul class="sub-menu">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
         </li>
         <li>Careers</li>
         <li>About</li>
+        <div id="inner-user-registration-controls" class="user-registration-controls" data-visibility="true">
+          <button type="button" class="button-alt">Login</button>
+          <button type="button">Register</button>
+        </div>
       </ul>
-      <div class="user-registration-controls">
-        <button type="button">Login</button>
+      <div id="outer-user-registration-controls" class="user-registration-controls" data-visibility="true">
+        <button type="button" class="button-alt">Login</button>
         <button type="button">Register</button>
       </div>
-      <span id="nav-toggler"
+      <button aria-controls="primary-navigation" class="mobile-nav-toggle"><span class="sr-only"><img src="images/icon-menu.svg" alt="navigation toggler icon"
+        /></span>
+        <!-- rewrite the button like on video on yt from kevin -->
+      </button>
+      <!-- <span id="nav-toggler"
         ><img src="images/icon-menu.svg" alt="navigation toggler icon"
-      /></span>
+      /></span> -->
     </nav>
     <section class="main-content">
       <aside>
         <!-- not switching pictures -->
-        <!-- <picture>
-          <source srcset="images/image-hero-mobile.png" media="(min-width: 375px)" >
-          <source srcset="images/image-hero-desktop.png" media="(min-width: 1440px)">
+        <picture>
+          <source srcset="images/image-hero-mobile.png" media="(max-width: 1439px)" >
           <img
+          src="images/image-hero-desktop.png"
+          alt="man working on laptop surrounded by artificial switch icons"
+        />
+        </picture>
+        <!-- <img
+          class="mobile-hero-img"
           src="images/image-hero-mobile.png"
           alt="man working on laptop surrounded by artificial switch icons"
         />
-        </picture> -->
-        <img class="mobile-hero-img" src="images/image-hero-mobile.png" alt="man working on laptop surrounded by artificial switch icons">
-        <img class="desktop-hero-img" src="images/image-hero-desktop.png" alt="man working on laptop surrounded by artificial switch icons">
-        
+        <img
+          class="desktop-hero-img"
+          src="images/image-hero-desktop.png"
+          alt="man working on laptop surrounded by artificial switch icons"
+        /> -->
       </aside>
       <article>
         <div>
-        <h1>Make remote work</h1>
-        <p>
-          Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.
-        </p>
-        <a href="" target="_blank">Learn more</a>
-      </div>
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="" target="_blank">Learn more</a>
+        </div>
         <div class="logos-clients">
           <img src="images/client-databiz.svg" alt="logo databiz client" />
           <img src="images/client-audiophile.svg" alt="logo audophile client" />
