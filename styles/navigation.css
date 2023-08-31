@@ -164,4 +164,4 @@ button.button-alt {
   }
   
 }
-/* learn grid placement on nav on bigger sizes */
+/* recheck style of nav and its inheritance on primary nav and links in order to prevent content of links in submenu overflow under layer primary nav/logo */
