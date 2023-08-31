@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+:root {
+  --almost-white: hsl(0 0% 98%);
+  --medium-gray: hsl(0 0% 41%);
+  --almost-black: hsl(0 0% 8%);
+}
+body {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  margin: 0;
+  padding: 0;
+  font-family: Epiloque, sans-serif;
+}
+input,
+textarea,
+form,
+label, a  {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+aside img {
+  width: 115%;
+  height: auto;
+}
+aside img.mobile-hero-img {
+  max-width: initial;
+  display: block;
+}
+aside img.desktop-hero-img {
+  display: none;
+}
+section.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+section.main-content > article {
+  text-align: center;
+  padding: 0 1rem;
+}
+article h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0.5rem;
+}
+article p {
+  font-size: 1.25rem;
+  color: hsla(0, 0%, 50%, 0.563);
+  font-weight: 800;
+  padding: 0 0.5rem;
+  margin: 3rem 0;
+}
+article a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--almost-white);
+  background-color: var(--almost-black);
+  margin: 1.5rem 0.5rem;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  &:hover {
+    background-color: var(--almost-white);
+    color: var(--medium-gray);
+    border: 2px solid var(--almost-black);
+  }
+}
+.logos-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(10%,5rem);
+  margin: 4rem;
+  & img {
+    width: min(20%,7rem);
+  }
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+
+}
+@media screen and (min-width: 90rem) {
+  section.main-content {
+    flex-direction: row-reverse;
+    margin: 0 10vw;
+  }
+  section.main-content > article {
+    flex: 0.6;
+    margin: 3rem 0;
+    text-align: left;
+    & h1 {
+      font-size: 5.5rem;
+    }
+    & p {
+      max-width: 35rem;
+    }
+  }
+  section.main-content > aside {
+    flex: 0.4;
+  }
+  .logos-clients {
+    justify-content: left;
+  }
+}
