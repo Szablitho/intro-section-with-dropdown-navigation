@@ -22,6 +22,7 @@ nav {
   border: none;
 }
 .primary-navigation {
+  display: none;
   list-style-type: none;
   position: fixed;
   inset: 0 0 0 40%;
@@ -40,6 +41,7 @@ nav {
       "ul";
     align-items: center;
     gap: 1rem;
+    user-select: none;
   }
   & li:hover {
     color: var(--almost-black);
@@ -57,7 +59,6 @@ nav {
 }
 .arrow-down {
   width: 1rem;
-  vertical-align: center;
   height: auto;
   margin: 0.2rem 1rem;
 }
@@ -80,7 +81,7 @@ nav {
 button.button-alt {
   border: none;
   &:hover {
-    border:none;
+    border: none;
   }
 }
 #backdrop {
@@ -100,6 +101,12 @@ button.button-alt {
   & button {
     padding: 0.5rem 1rem;
   }
+}
+.sub-menu {
+  display: none;
+  box-shadow: 0 0 0 transparent;
+  border-radius: 0;
+  border: none;
 }
 @media screen and (min-width: 90rem) {
   nav:nth-child(1) {
@@ -133,15 +140,7 @@ button.button-alt {
       margin: 0;
     }
   }
-  .sub-menu {
-    /* display: none; */
-    box-shadow: 0 0 20px 8px hsl(0 0% 0% / 0.05);
-    border-radius: 15px;
-    padding: 1rem 2rem;
-  }
-  #nav-toggler {
-    display: none;
-  }
+
   .mobile-nav-toggle {
     display: none;
     position: absolute;
@@ -149,6 +148,13 @@ button.button-alt {
     width: 0.01px;
     height: 0.01px;
   }
+  .sub-menu {
+    display: none;
+    box-shadow: 0 0 20px 8px hsl(0 0% 0% / 0.05);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+  }
+  
   #close-icon {
     display: none;
   }
@@ -162,6 +168,9 @@ button.button-alt {
   #inner-user-registration-controls {
     display: none;
   }
-  
+}
+/* to be used with JS */
+.expanded {
+  display: initial !important;
 }
 /* recheck style of nav and its inheritance on primary nav and links in order to prevent content of links in submenu overflow under layer primary nav/logo */
