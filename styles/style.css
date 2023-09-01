@@ -19,7 +19,7 @@ label, a  {
   box-sizing: border-box;
 }
 aside img {
-  width: 115%;
+  width: 100%;
   height: auto;
 }
 aside img.mobile-hero-img {
@@ -102,5 +102,8 @@ article a {
   }
   .logos-clients {
     justify-content: left;
+  }
+  .aside img {
+    width: 115%;
   }
 }
