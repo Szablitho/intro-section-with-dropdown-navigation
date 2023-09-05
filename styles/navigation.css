@@ -3,14 +3,6 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 1rem;
 }
-/* nav {
-  .user-registration-controls {
-    display: none;
-  }
-} */
-#nav-toggler {
-  display: initial;
-}
 .mobile-nav-toggle {
   display: block;
   width: 4rem;
@@ -130,7 +122,7 @@ button.button-alt {
     position: static;
     display: flex;
     justify-self: start;
-    overflow: hidden;
+    overflow: initial;
     padding: 0 5%;
     align-items: flex-start;
     gap: 3rem;
@@ -138,6 +130,16 @@ button.button-alt {
     & li {
       padding: 0;
       margin: 0;
+      position: relative;
+      width: max-content;
+    }
+    & :nth-child(1) > .sub-menu {
+      bottom: -14rem;
+      right: 0;
+    }
+    & :nth-child(2) > .sub-menu{
+      top: 2rem;
+      right: 0;
     }
   }
 
@@ -149,12 +151,14 @@ button.button-alt {
     height: 0.01px;
   }
   .sub-menu {
+    position: absolute;
     display: none;
     box-shadow: 0 0 20px 8px hsl(0 0% 0% / 0.05);
     border-radius: 15px;
     padding: 1rem 2rem;
+    background: var(--almost-white);
   }
-  
+
   #close-icon {
     display: none;
   }
