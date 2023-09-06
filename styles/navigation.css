@@ -12,6 +12,9 @@ nav {
   top: 2rem;
   right: 2rem;
   border: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .primary-navigation {
   display: none;
@@ -32,7 +35,6 @@ nav {
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0;
-    align-items: center;
   }
   & li:hover {
     color: var(--almost-black);
@@ -43,8 +45,6 @@ nav {
   }
 }
 .arrow-down {
-  width: 1rem;
-  height: auto;
   margin: 0.2rem 1rem;
 }
 .user-registration-controls > button {
@@ -75,12 +75,6 @@ button.button-alt {
   inset: 0 0 0 0;
   display: none; /* to be switched */
 }
-#close-icon {
-  position: absolute;
-  top: 1.5rem;
-  right: 1rem;
-  display: block;
-}
 #outer-user-registration-controls {
   display: none;
   & button {
@@ -94,6 +88,7 @@ button.button-alt {
   border: none;
   & li {
    flex-direction: row;
+   align-items: center;
   }
 }
 @media screen and (min-width: 90rem) {
@@ -173,4 +168,3 @@ button.button-alt {
 .expanded {
   display: initial !important;
 }
-/* recheck style of nav and its inheritance on primary nav and links in order to prevent content of links in submenu overflow under layer primary nav/logo */
