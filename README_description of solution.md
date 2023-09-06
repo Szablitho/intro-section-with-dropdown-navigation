@@ -14,7 +14,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -52,19 +51,9 @@ Then, in JS functions handle opening menu and dropdown of sub-menus. Additionaly
 - Flexbox for all small containers like `<ul>`
 - CSS Grid for navigation on PC layout
 - Mobile-first workflow
-- CSS new syntax(example under)
+- CSS ampersand syntax(example under)
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
 @media screen and (min-width: 90rem) {
   section.main-content {
